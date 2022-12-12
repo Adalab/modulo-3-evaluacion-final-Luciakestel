@@ -1,12 +1,12 @@
-import { useEffect } from 'react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import getDataFromApi from '../services/api';
 import '../styles/App.scss';
+import CharacterList from './CharacterList';
 
 function App() {
 
   //VARIABLES ESTADO
-const [characters, setCharacters] = useState({});
+const [characters, setCharacters] = useState([]);
 
   //USEEFFECT
   useEffect(() => {
@@ -18,9 +18,9 @@ const [characters, setCharacters] = useState({});
   //HTML EN EL RETURN
 
   return (
-    <div className="App">
-     Hola mundo
-    </div>
+    <>
+     <CharacterList characters={characters}/>
+    </>
 
   );
 }
