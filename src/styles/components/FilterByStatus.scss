@@ -2,8 +2,8 @@
 
 .formStatus {
   background-color: rgba(0, 0, 0, 0.7);
-  padding-top: rem(10);
-  padding-bottom: rem(10);
+  padding-top: rem(15);
+  padding-bottom: rem(15);
   @media all and (min-width: rem(768)) {
     text-align: center;
   }
@@ -20,7 +20,7 @@
   &_label2 {
     color: white;
     font-family: 'Quicksand', sans-serif;
-    margin: rem(2);
+    margin: rem(7);
     @media all and (min-width: rem(768)) {
       font-size: rem(20);
       margin: rem(10);

@@ -9,6 +9,7 @@
     font-family: 'Quicksand', sans-serif;
     text-transform: uppercase;
     text-align: center;
+    padding: rem(15);
     @media all and (min-width: rem(768)) {
       font-size: rem(35);
     }

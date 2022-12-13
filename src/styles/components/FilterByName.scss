@@ -2,6 +2,7 @@
 
 .form {
   background-color: rgba(0, 0, 0, 0.7);
+  padding-top: rem(5);
   @media all and (min-width: rem(768)) {
     text-align: center;
   }

@@ -10,7 +10,7 @@ const FilterByStatus = (props) =>{
     }
         return(
             <form onSubmit={handleSubmit} className='formStatus'>
-                <label htmlFor="searchName" className='formStatus_label'>Search by status:</label>
+                <label htmlFor="searchName" className='formStatus_label'>By status:</label>
                 <input type="checkbox" value='Alive' onChange={handleFilter} checked={props.filterByStatus.includes('Alive')} className='formStatus_input'/>
                 <label htmlFor="alive" className='formStatus_label2'>Alive</label>
                 <input type="checkbox" value='Dead' onChange={handleFilter}

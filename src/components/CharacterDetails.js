@@ -37,6 +37,7 @@ return(
             <li className="detailsArticle__list_element">{`Gender: ${characterFound.gender}`}</li>
             <li className="detailsArticle__list_element">{`Status: ${characterFound.status}`}{renderStatus()}</li>
             <li className="detailsArticle__list_element">{`Origin: ${characterFound.origin}`}</li>
+            <li className="detailsArticle__list_element">{`Episodes: ${characterFound.episode}`}</li>
 
         </ul>
         <Link className="detailsArticle__link" to='/'>Return</Link>

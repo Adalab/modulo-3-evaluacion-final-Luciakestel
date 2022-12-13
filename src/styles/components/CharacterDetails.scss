@@ -15,18 +15,30 @@
     height: rem(200);
     margin-bottom: rem(20);
     border-radius: rem(10);
+    @media all and (min-width: rem(768)) {
+      width: rem(300);
+      height: rem(300);
+    }
   }
   &__title {
     font-size: rem(25);
     color: white;
     margin-bottom: rem(5);
     font-family: 'Quicksand', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    @media all and (min-width: rem(768)) {
+      font-size: rem(35);
+    }
   }
   &__list {
     &_element {
       font-size: rem(20);
       color: white;
       font-family: 'Quicksand', sans-serif;
+      @media all and (min-width: rem(768)) {
+        font-size: rem(30);
+      }
     }
   }
   &__link {
@@ -38,5 +50,12 @@
     text-transform: uppercase;
     font-family: 'Quicksand', sans-serif;
     font-weight: bold;
+    @media all and (min-width: rem(768)) {
+      font-size: rem(30);
+      bottom: rem(50);
+      right: rem(30);
+    }
   }
+}
+.icon {
 }

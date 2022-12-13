@@ -39,6 +39,12 @@ setFilterByName(value)
       setFilterByStatus([...filterByStatus, value]);
     }
        };
+
+const handleReset = () =>{
+  setFilterByName('');
+  setFilterBySpecies('all');
+  setFilterByStatus([]);
+}
   //FUNCIONES Y VARIABLES QUE AYUDEN A RENDERIZAR EL HTML
 
 const charactersFiltered = characters.filter((character) =>character.name.toLowerCase().includes(filterByName.toLowerCase()))
@@ -71,7 +77,7 @@ const findCharacter = (id) =>{
       <Route path='/' element={
         <>
         <Header />
-        <Filters handleFilterName={handleFilterName} filterByName={filterByName} handleFilterSpecies={handleFilterSpecies} filterBySpecies={filterBySpecies} handleFilterStatus={handleFilterStatus} filterByStatus={filterByStatus}/>
+        <Filters handleFilterName={handleFilterName} filterByName={filterByName} handleFilterSpecies={handleFilterSpecies} filterBySpecies={filterBySpecies} handleFilterStatus={handleFilterStatus} filterByStatus={filterByStatus} handleReset={handleReset}/>
      <CharacterList characters={charactersFiltered}/>
         </>
       }/>

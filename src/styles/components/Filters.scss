@@ -1,0 +1,11 @@
+@import '../core/functions';
+
+.reset {
+  position: absolute;
+  top: rem(50);
+  left: rem(10);
+  padding: rem(5);
+  font-size: rem(12);
+  border-radius: rem(5);
+  border: none;
+}

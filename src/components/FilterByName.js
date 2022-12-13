@@ -10,7 +10,7 @@ const handleFilter = (event) =>{
 }
     return(
         <form onSubmit={handleSubmit} className='form'>
-            <label className="form_label" htmlFor="searchName">Search by name:</label>
+            <label className="form_label" htmlFor="searchName">By name:</label>
             <input type="text" placeholder='Ex: Rick' value={props.filterByName} onChange={handleFilter} className="form_input"/>
         </form>
     )
