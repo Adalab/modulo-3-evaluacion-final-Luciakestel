@@ -41,15 +41,7 @@ setFilterByName(value)
        };
   //FUNCIONES Y VARIABLES QUE AYUDEN A RENDERIZAR EL HTML
 
-const charactersFiltered = characters.filter((character) =>
-// {
-//   if (character.name.includes(filterByName)){
-//     return filterByName;
-//   } else{
-//     return <p>'No existe ningún personaje que se llame así'</p>;
-//   }
-// })
-character.name.toLowerCase().includes(filterByName.toLowerCase()))
+const charactersFiltered = characters.filter((character) =>character.name.toLowerCase().includes(filterByName.toLowerCase()))
 .filter((character) => {
   if(filterBySpecies === 'all'){
     return true;
