@@ -1,0 +1,27 @@
+@import '../core/functions';
+
+.formStatus {
+  background-color: rgba(0, 0, 0, 0.7);
+  @media all and (min-width: rem(768)) {
+    text-align: center;
+  }
+
+  &_label {
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    margin: rem(10) rem(10) rem(10) rem(5);
+    @media all and (min-width: rem(768)) {
+      font-size: rem(20);
+      margin-top: rem(20);
+    }
+  }
+  &_label2 {
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    margin: rem(2);
+    @media all and (min-width: rem(768)) {
+      font-size: rem(20);
+      margin: rem(10);
+    }
+  }
+}

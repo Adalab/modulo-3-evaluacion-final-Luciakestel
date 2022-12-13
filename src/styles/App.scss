@@ -3,9 +3,7 @@
 
 .App {
   background-image: url('../images/RyM.jpeg');
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-repeat: repeat;
+  background-size: contain;
   background-position: center center;
-  // opacity: 0.6;
-  // z-index: -1;
 }

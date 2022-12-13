@@ -13,6 +13,7 @@ function App() {
 const [characters, setCharacters] = useState([]);
 const [filterByName, setFilterByName] = useState('');
 const [filterBySpecies, setFilterBySpecies] = useState('all');
+const [filterByStatus, setFilterByStatus] = useState([]);
 
   //USEEFFECT
   useEffect(() => {
@@ -28,16 +29,26 @@ setFilterByName(value)
   const handleFilterSpecies = (value) =>{
     setFilterBySpecies(value)
       };
+
+  const handleFilterStatus = (value) =>{
+    if(filterByStatus.includes(value)){
+      const status = filterByStatus.indexOf(value);
+      filterByStatus.splice(status, 1);
+      setFilterByStatus([...filterByStatus]);
+    } else{
+      setFilterByStatus([...filterByStatus, value]);
+    }
+       };
   //FUNCIONES Y VARIABLES QUE AYUDEN A RENDERIZAR EL HTML
 
 const charactersFiltered = characters.filter((character) =>
 // {
-//   if (character.name.toLowerCase().includes(filterByName.toLowerCase())){
-//     return true;
+//   if (character.name.includes(filterByName)){
+//     return filterByName;
 //   } else{
 //     return <p>'No existe ningún personaje que se llame así'</p>;
 //   }
-// }
+// })
 character.name.toLowerCase().includes(filterByName.toLowerCase()))
 .filter((character) => {
   if(filterBySpecies === 'all'){
@@ -45,7 +56,15 @@ character.name.toLowerCase().includes(filterByName.toLowerCase()))
   } else{
     return character.species === filterBySpecies;
   }
+  
+}).filter((character)=>{
+  if(filterByStatus.length === 0){
+    return true;
+  } else{
+    return filterByStatus.includes(character.status);
+  }
 })
+
 
 const findCharacter = (id) =>{
   return characters.find((character) => character.id === parseInt(id));
@@ -55,11 +74,12 @@ const findCharacter = (id) =>{
   //HTML EN EL RETURN
   return (
     <div className='App'>
-    <Header />
+    
     <Routes>
       <Route path='/' element={
         <>
-        <Filters handleFilterName={handleFilterName} filterByName={filterByName} handleFilterSpecies={handleFilterSpecies} filterBySpecies={filterBySpecies}/>
+        <Header />
+        <Filters handleFilterName={handleFilterName} filterByName={filterByName} handleFilterSpecies={handleFilterSpecies} filterBySpecies={filterBySpecies} handleFilterStatus={handleFilterStatus} filterByStatus={filterByStatus}/>
      <CharacterList characters={charactersFiltered}/>
         </>
       }/>

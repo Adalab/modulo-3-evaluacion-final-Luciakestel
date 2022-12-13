@@ -1,25 +1,42 @@
 @import '../core/functions';
 
-// .article {
-//   &__img {
-//   }
-//   &__title {
-//   }
-//   &__list {
-//     &_element {
-//     }
-//   }
-// }
-// .link {
-// }
-.icon {
-  width: rem(30);
-  height: rem(30);
-  color: green;
-}
+.detailsArticle {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 
-.fa-alien-8bit {
-  width: rem(30);
-  height: rem(30);
-  color: green;
+  &__img {
+    width: rem(200);
+    height: rem(200);
+    margin-bottom: rem(20);
+    border-radius: rem(10);
+  }
+  &__title {
+    font-size: rem(25);
+    color: white;
+    margin-bottom: rem(5);
+    font-family: 'Quicksand', sans-serif;
+  }
+  &__list {
+    &_element {
+      font-size: rem(20);
+      color: white;
+      font-family: 'Quicksand', sans-serif;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    color: white;
+    position: absolute;
+    bottom: rem(10);
+    right: rem(10);
+    text-transform: uppercase;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+  }
 }

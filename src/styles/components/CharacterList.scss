@@ -1,0 +1,16 @@
+@import '../core/functions';
+
+.card {
+  &_list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(15);
+    margin-left: rem(15);
+    @media all and (min-width: rem(768)) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: rem(20);
+      margin-left: rem(20);
+    }
+  }
+}

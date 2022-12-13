@@ -13,25 +13,47 @@
   margin-bottom: rem(20);
   border-radius: rem(30);
   margin: rem(15) auto;
+  @media all and (min-width: rem(768)) {
+    width: rem(200);
+    height: rem(250);
+    grid-template-areas:
+      'a a'
+      'b b';
+  }
   &_img {
     width: rem(150);
     height: rem(150);
     border-radius: 50%;
     grid-area: a;
     margin-right: rem(20);
+    @media all and (min-width: rem(768)) {
+      width: rem(180);
+      height: rem(180);
+      margin: 0 auto;
+    }
   }
   &_container {
     grid-area: b;
+    text-align: center;
     &_title {
       font-size: rem(15);
       font-weight: bold;
       color: black;
       margin-bottom: rem(15);
+      font-family: 'Quicksand', sans-serif;
+      @media all and (min-width: rem(768)) {
+        font-size: rem(20);
+        margin: 0 auto;
+      }
     }
     &_text {
       font-size: rem(15);
       font-weight: bold;
       color: black;
+      font-family: 'Quicksand', sans-serif;
+      @media all and (min-width: rem(768)) {
+        font-size: rem(18);
+      }
     }
   }
 }

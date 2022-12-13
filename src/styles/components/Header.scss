@@ -5,6 +5,12 @@
     font-size: rem(20);
     font-weight: bold;
     color: white;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.7);
+    font-family: 'Quicksand', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    @media all and (min-width: rem(768)) {
+      font-size: rem(35);
+    }
   }
 }

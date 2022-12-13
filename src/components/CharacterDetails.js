@@ -29,18 +29,19 @@ const renderStatus = () =>{
 
 return(
     <>
-    <article className="article">
-        <img src={characterFound.image} alt={`Foto de ${characterFound.name}`} className='article__img' />
-        <h2 className="article__title">{characterFound.name}</h2>
-        <ul className="article__list">
-            <li className="article__list_element">{`Specie: ${characterFound.species} `}{renderSpecie()}</li>
-            <li className="article__list_element">{`Gender: ${characterFound.gender}`}</li>
-            <li className="article__list_element">{`Status: ${characterFound.status}`}</li>
-            <li className="article__list_element">{`Origin: ${characterFound.origin}`}</li>
+    <article className="detailsArticle">
+        <img src={characterFound.image} alt={`Foto de ${characterFound.name}`} className='detailsArticle__img' />
+        <h2 className="detailsArticle__title">{characterFound.name}</h2>
+        <ul className="detailsArticle__list">
+            <li className="detailsArticle__list_element">{`Specie: ${characterFound.species} `}{renderSpecie()}</li>
+            <li className="detailsArticle__list_element">{`Gender: ${characterFound.gender}`}</li>
+            <li className="detailsArticle__list_element">{`Status: ${characterFound.status}`}{renderStatus()}</li>
+            <li className="detailsArticle__list_element">{`Origin: ${characterFound.origin}`}</li>
 
         </ul>
+        <Link className="detailsArticle__link" to='/'>Return</Link>
     </article>
-    <Link className="link" to='/'>Return</Link>
+    
     </>
 )
 };
