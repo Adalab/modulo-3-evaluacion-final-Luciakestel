@@ -1,0 +1,40 @@
+@import '../core/functions';
+
+.article {
+  width: rem(280);
+  height: rem(170);
+  display: grid;
+  grid-template-areas:
+    'a b'
+    'a b';
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin-bottom: rem(20);
+  border-radius: rem(30);
+  margin: rem(15) auto;
+  &_img {
+    width: rem(150);
+    height: rem(150);
+    border-radius: 50%;
+    grid-area: a;
+    margin-right: rem(20);
+  }
+  &_container {
+    grid-area: b;
+    &_title {
+      font-size: rem(15);
+      font-weight: bold;
+      color: black;
+      margin-bottom: rem(15);
+    }
+    &_text {
+      font-size: rem(15);
+      font-weight: bold;
+      color: black;
+    }
+  }
+}
+.link {
+  text-decoration: none;
+}

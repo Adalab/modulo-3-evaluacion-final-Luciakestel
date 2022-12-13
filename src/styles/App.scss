@@ -1,1 +1,11 @@
 @import 'core/reset';
+@import 'core/functions';
+
+.App {
+  background-image: url('../images/RyM.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  // opacity: 0.6;
+  // z-index: -1;
+}
