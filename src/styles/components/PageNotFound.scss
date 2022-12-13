@@ -1,0 +1,15 @@
+@import '../core/functions';
+
+.msgError {
+  background-color: black;
+  color: white;
+  font-size: rem(30);
+  font-family: 'Quicksand', sans-serif;
+  &_div {
+    background-image: url(../../images/error.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: remm(300);
+    height: rem(200);
+  }
+}

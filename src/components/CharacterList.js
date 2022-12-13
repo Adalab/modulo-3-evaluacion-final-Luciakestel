@@ -18,13 +18,6 @@ if(characters.length === 0){
     </section>
     )
 }
-    // return (
-    //     <section className="card">
-    //         <ul className="card_list">
-    //             {characterElement}
-    //         </ul>
-    //     </section>
-    // );
 };
 
 export default CharacterList;
