@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import '../styles/components/CharacterDetails.scss';
+import PageNotFound from './PageNotFound';
 
 const CharacterDetails = (props) =>{
 
@@ -26,9 +27,11 @@ const renderStatus = () =>{
     } 
 };
 
-
-return(
-    <>
+if(characterFound === undefined){
+    return <PageNotFound />
+} else{
+    return(
+<>
     <article className="detailsArticle">
         <img src={characterFound.image} alt={`Foto de ${characterFound.name}`} className='detailsArticle__img' />
         <h2 className="detailsArticle__title">{characterFound.name}</h2>
@@ -44,7 +47,9 @@ return(
     </article>
     
     </>
-)
+    )
+}
+
 };
 
 export default CharacterDetails;

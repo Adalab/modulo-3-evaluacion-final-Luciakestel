@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Route, Routes, useNavigate } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import getDataFromApi from '../services/api';
 import ls from '../services/localStorage';
 import '../styles/App.scss';
@@ -17,7 +17,6 @@ function App() {
   const [filterBySpecies, setFilterBySpecies] = useState(ls.get('FilterBySpecie', 'all'));
   const [filterByStatus, setFilterByStatus] = useState(ls.get('FilterByStatus', []));
 
-  const navigate = useNavigate();
   //USEEFFECT
   useEffect(() => {
     getDataFromApi().then((data) => setCharacters(data));
