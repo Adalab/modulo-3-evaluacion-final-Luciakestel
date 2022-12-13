@@ -17,6 +17,7 @@ function App() {
   const [filterBySpecies, setFilterBySpecies] = useState(ls.get('FilterBySpecie', 'all'));
   const [filterByStatus, setFilterByStatus] = useState(ls.get('FilterByStatus', []));
 
+  const navigate = useNavigate();
   //USEEFFECT
   useEffect(() => {
     getDataFromApi().then((data) => setCharacters(data));
@@ -49,6 +50,7 @@ function App() {
     setFilterByName('');
     setFilterBySpecies('all');
     setFilterByStatus([]);
+    ls.clear();
   }
   //FUNCIONES Y VARIABLES QUE AYUDEN A RENDERIZAR EL HTML
 
@@ -78,15 +80,15 @@ function App() {
     <div className='App'>
 
       <Routes>
-        <Route path='/' element={
+        <Route path='/' exact element={
           <>
             <Header />
             <Filters handleFilterName={handleFilterName} filterByName={filterByName} handleFilterSpecies={handleFilterSpecies} filterBySpecies={filterBySpecies} handleFilterStatus={handleFilterStatus} filterByStatus={filterByStatus} handleReset={handleReset} />
             <CharacterList characters={charactersFiltered} />
           </>
         } />
-        <Route path='/character/:id' element={<CharacterDetails findCharacter={findCharacter} />} />
-        <Route path='/*' element={ <PageNotFound /> }/>
+        <Route path='/character/:id' exact element={<CharacterDetails findCharacter={findCharacter} />} />
+        <Route path='*' element={ <PageNotFound /> }/>
       </Routes>
 
 

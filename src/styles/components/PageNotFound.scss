@@ -1,8 +1,8 @@
 @import '../core/functions';
 
 .msgError {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
   font-size: rem(30);
   font-family: 'Quicksand', sans-serif;
   &_div {
@@ -11,5 +11,14 @@
     background-size: cover;
     width: remm(300);
     height: rem(200);
+  }
+  &_link {
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    position: absolute;
+    right: rem(10);
+    border: 1px solid;
+    padding: rem(10);
   }
 }
