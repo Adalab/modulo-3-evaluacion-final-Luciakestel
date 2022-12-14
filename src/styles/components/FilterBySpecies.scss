@@ -1,4 +1,5 @@
 @import '../core/functions';
+@import '../core/variables';
 
 .formSpecies {
   padding-top: rem(5);
@@ -19,6 +20,7 @@
   }
   &_select {
     font-size: rem(15);
+    border: rem(2) solid $colorBlue;
 
     @media all and (min-width: rem(1080)) {
       font-size: rem(20);

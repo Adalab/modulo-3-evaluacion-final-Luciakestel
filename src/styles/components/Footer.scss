@@ -1,0 +1,26 @@
+@import '../core/functions';
+@import '../core/variables';
+
+.footer {
+  background-color: #030303;
+  border-top: rem(1) solid gray;
+  display: flex;
+  justify-content: space-around;
+  padding: rem(25);
+  &_text {
+    background: -webkit-linear-gradient($colorBlue, $colorLigthGreen);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: $colorBlue;
+    font-size: rem(20);
+    font-family: 'Quicksand', sans-serif;
+  }
+  &_copy {
+    background: -webkit-linear-gradient($colorLigthGreen, $colorBlue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: $colorGreen;
+    font-size: rem(20);
+    font-family: 'Quicksand', sans-serif;
+  }
+}

@@ -1,6 +1,7 @@
 @import '../core/functions';
 
 .card {
+  background-color: #030303;
   &_list {
     display: flex;
     flex-wrap: wrap;
@@ -25,4 +26,10 @@
   text-align: center;
   color: white;
   background-color: #030303;
+  padding: rem(10);
+  &_alert {
+    width: rem(20);
+    height: rem(20);
+    color: yellow;
+  }
 }

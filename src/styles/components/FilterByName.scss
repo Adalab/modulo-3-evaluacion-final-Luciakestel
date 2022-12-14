@@ -19,6 +19,7 @@
     }
   }
   &_input {
+    border: rem(2) solid $colorBlue;
     margin: rem(10);
     @media all and (min-width: rem(768)) {
       font-size: rem(15);

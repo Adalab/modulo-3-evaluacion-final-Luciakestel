@@ -6,6 +6,7 @@ import '../styles/App.scss';
 import CharacterDetails from './CharacterDetails';
 import CharacterList from './CharacterList';
 import Filters from './Filters';
+import Footer from './Footer';
 import Header from './Header';
 import PageNotFound from './PageNotFound';
 
@@ -81,13 +82,21 @@ function App() {
       <Routes>
         <Route path='/' exact element={
           <>
+          <body className='body'>
+            
+          
             <Header />
-            <Filters handleFilterName={handleFilterName} filterByName={filterByName} handleFilterSpecies={handleFilterSpecies} filterBySpecies={filterBySpecies} handleFilterStatus={handleFilterStatus} filterByStatus={filterByStatus} handleReset={handleReset} />
-            <CharacterList characters={charactersFiltered} />
+            <main >
+              <Filters handleFilterName={handleFilterName} filterByName={filterByName} handleFilterSpecies={handleFilterSpecies} filterBySpecies={filterBySpecies} handleFilterStatus={handleFilterStatus} filterByStatus={filterByStatus} handleReset={handleReset} />
+              <CharacterList characters={charactersFiltered} />
+            </main>
+            <Footer />
+            </body>
           </>
         } />
         <Route path='/character/:id' exact element={<CharacterDetails findCharacter={findCharacter} />} />
-        <Route path='*' element={ <PageNotFound /> }/>
+        <Route path='*' element={<PageNotFound />} />
+
       </Routes>
 
 

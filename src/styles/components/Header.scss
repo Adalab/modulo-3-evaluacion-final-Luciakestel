@@ -4,6 +4,8 @@
 .header {
   display: flex;
   justify-content: center;
+  background-color: #030303;
+
   &_img {
     width: rem(300);
     height: rem(120);
