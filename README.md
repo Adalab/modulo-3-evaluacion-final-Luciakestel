@@ -2,8 +2,8 @@
 
 ## Description
 
-    In this project there are one page where you can find some rick and morty's serie characters with some information about them, like image, name and specie. On these page exist three filters where you will be able to filter by name, species or status.
-    On the other hand, you will be able to click on whatever character you wish and you will be able to find more information about him.
+In this project there are one page where you can find some rick and morty's serie characters with some information about them, like image, name and specie. On these page exist three filters where you will be able to filter by name, species or status.
+On the other hand, you will be able to click on whatever character you wish and you will be able to find more information about him.
 
 ![Page image](./src/images/readme-page.png)
 
