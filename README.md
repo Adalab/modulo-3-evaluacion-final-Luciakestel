@@ -24,7 +24,7 @@ When installation is finished, you will run page with:
 
     npm start
 
-To make these project, the API was proporcionate by teachers: https://rickandmortyapi.com/documentation/#get-all-characters
+To make these project, the API was: https://rickandmortyapi.com/documentation/#get-all-characters
 
 ## Result
 

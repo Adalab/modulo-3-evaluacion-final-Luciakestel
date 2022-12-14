@@ -12,15 +12,21 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: $colorBlue;
-    font-size: rem(20);
+    font-size: rem(15);
     font-family: 'Quicksand', sans-serif;
+    @media all and (min-width: rem(768)) {
+      font-size: rem(20);
+    }
   }
   &_copy {
     background: -webkit-linear-gradient($colorLigthGreen, $colorBlue);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: $colorGreen;
-    font-size: rem(20);
+    font-size: rem(15);
     font-family: 'Quicksand', sans-serif;
+    @media all and (min-width: rem(768)) {
+      font-size: rem(20);
+    }
   }
 }
