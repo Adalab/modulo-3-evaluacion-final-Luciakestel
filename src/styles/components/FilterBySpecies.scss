@@ -1,7 +1,6 @@
 @import '../core/functions';
 
 .formSpecies {
-  background-color: rgba(0, 0, 0, 0.7);
   padding-top: rem(5);
   @media all and (min-width: rem(768)) {
     text-align: center;
@@ -13,6 +12,16 @@
     @media all and (min-width: rem(768)) {
       font-size: rem(20);
       margin-bottom: rem(20);
+    }
+    @media all and (min-width: rem(1080)) {
+      font-size: rem(25);
+    }
+  }
+  &_select {
+    font-size: rem(15);
+
+    @media all and (min-width: rem(1080)) {
+      font-size: rem(20);
     }
   }
 }

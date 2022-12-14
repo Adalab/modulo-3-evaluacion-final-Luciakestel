@@ -1,11 +1,9 @@
 @import '../core/functions';
+@import '../core/variables';
 
 .detailsArticle {
   width: 100%;
   height: 100vh;
-  background-image: url('../../images/RyM4.jpeg');
-  background-repeat: no-repeat;
-  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,33 +11,50 @@
   position: relative;
 
   &__img {
-    width: rem(200);
-    height: rem(200);
+    width: rem(180);
+    height: rem(180);
     margin-bottom: rem(20);
     border-radius: rem(10);
 
     @media all and (min-width: rem(768)) {
+      width: rem(250);
+      height: rem(250);
+    }
+
+    @media all and (min-width: rem(1080)) {
       width: rem(300);
       height: rem(300);
     }
   }
   &__title {
     font-size: rem(25);
-    color: white;
-    margin-bottom: rem(5);
+    background: -webkit-linear-gradient($colorBlue, $colorLigthGreen);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: $colorBlue;
+    margin-bottom: rem(10);
     font-family: 'Quicksand', sans-serif;
     text-transform: uppercase;
     text-align: center;
     @media all and (min-width: rem(768)) {
+      font-size: rem(30);
+    }
+    @media all and (min-width: rem(1080)) {
       font-size: rem(35);
     }
   }
   &__list {
+    margin-bottom: rem(10);
     &_element {
       font-size: rem(20);
       color: white;
+      text-align: center;
       font-family: 'Quicksand', sans-serif;
+
       @media all and (min-width: rem(768)) {
+        font-size: rem(25);
+      }
+      @media all and (min-width: rem(1080)) {
         font-size: rem(30);
       }
     }
@@ -49,16 +64,47 @@
     color: white;
     position: absolute;
     bottom: rem(10);
-    right: rem(10);
+    right: rem(15);
     text-transform: uppercase;
     font-family: 'Quicksand', sans-serif;
     font-weight: bold;
-    @media all and (min-width: rem(768)) {
-      font-size: rem(30);
-      bottom: rem(50);
-      right: rem(30);
+    @keyframes move {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        color: $colorLigthBlue;
+        opacity: 1;
+      }
+      100% {
+        color: $colorLigthGreen;
+        opacity: 1;
+      }
     }
+    animation-name: move;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
   }
-}
-.icon {
+  @media all and (min-width: rem(768)) {
+    font-size: rem(25);
+    bottom: rem(50);
+    right: rem(50);
+  }
+
+  @media all and (min-width: rem(1080)) {
+    font-size: rem(30);
+    bottom: rem(50);
+    right: rem(30);
+  }
+  &-arrow {
+    color: white;
+    width: rem(30);
+    height: rem(30);
+  }
+  &_alien {
+    color: green;
+  }
+  &_alive {
+    color: red;
+  }
 }

@@ -1,10 +1,10 @@
 import '../styles/components/Header.scss';
-
+import logo from '../images/RYM.png';
 
 const Header = () =>{
 return(
     <header className="header">
-    <h1 className='header__title'>Search your favourites characters</h1>
+    <img src={logo} alt="Logo Rick and Morty" className='header_img'/>
     </header>
 )
 };

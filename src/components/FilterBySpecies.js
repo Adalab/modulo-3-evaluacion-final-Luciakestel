@@ -12,10 +12,10 @@ const handleChange = (event) =>{
     return(
         <form onSubmit={handleSubmit} className='formSpecies'>
             <label className="formSpecies_label" htmlFor="searchSpecies">By species:</label>
-             <select name="species" id="species" onChange={handleChange} value={props.filterBySpecies}>
-                <option value="all">all</option>
-                <option value="Alien">alien</option>
-                <option value="Human">human</option>
+             <select name="species" id="species" onChange={handleChange} value={props.filterBySpecies} className='formSpecies_select'>
+                <option value="all">All</option>
+                <option value="Alien">Alien</option>
+                <option value="Human">Human</option>
              </select>
         </form>
     )

@@ -1,11 +1,19 @@
 @import '../core/functions';
 
 .reset {
-  position: absolute;
-  top: rem(50);
-  left: rem(10);
   padding: rem(5);
   font-size: rem(12);
   border-radius: rem(5);
-  border: none;
+  margin-left: rem(25);
+  border: rem(2) solid #9fdf8f;
+  display: flex;
+  cursor: pointer;
+  @media all and (min-width: rem(768)) {
+    font-size: rem(15);
+    margin: rem(5) auto;
+  }
+  @media all and (min-width: rem(1080)) {
+    font-size: rem(20);
+    margin: rem(5) auto;
+  }
 }
