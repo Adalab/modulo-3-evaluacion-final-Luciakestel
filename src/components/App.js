@@ -82,16 +82,14 @@ function App() {
       <Routes>
         <Route path='/' exact element={
           <>
-          <body className='body'>
-            
-          
+          <div className='body'>
             <Header />
             <main >
               <Filters handleFilterName={handleFilterName} filterByName={filterByName} handleFilterSpecies={handleFilterSpecies} filterBySpecies={filterBySpecies} handleFilterStatus={handleFilterStatus} filterByStatus={filterByStatus} handleReset={handleReset} />
               <CharacterList characters={charactersFiltered} />
             </main>
             <Footer />
-            </body>
+            </div>
           </>
         } />
         <Route path='/character/:id' exact element={<CharacterDetails findCharacter={findCharacter} />} />

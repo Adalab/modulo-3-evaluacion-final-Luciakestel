@@ -54,13 +54,16 @@
       font-size: rem(20);
       color: white;
       text-align: center;
+      line-height: rem(25);
       font-family: 'Quicksand', sans-serif;
 
       @media all and (min-width: rem(768)) {
         font-size: rem(25);
+        line-height: rem(30);
       }
       @media all and (min-width: rem(1080)) {
         font-size: rem(30);
+        line-height: rem(35);
       }
     }
   }
